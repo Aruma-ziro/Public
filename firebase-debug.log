@@ -1,0 +1,41 @@
+[debug] [2018-02-08T08:10:21.347Z] ----------------------------------------------------------------------
+[debug] [2018-02-08T08:10:21.349Z] Command:       /usr/local/var/nodebrew/node/v8.9.1/bin/node /usr/local/var/nodebrew/current/bin/firebase serve
+[debug] [2018-02-08T08:10:21.349Z] CLI Version:   3.16.0
+[debug] [2018-02-08T08:10:21.349Z] Platform:      darwin
+[debug] [2018-02-08T08:10:21.349Z] Node Version:  v8.9.1
+[debug] [2018-02-08T08:10:21.350Z] Time:          Thu Feb 08 2018 17:10:21 GMT+0900 (JST)
+[debug] [2018-02-08T08:10:21.350Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2018-02-08T08:10:21.363Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2018-02-08T08:10:21.363Z] > authorizing via signed-in user
+[debug] [2018-02-08T08:10:21.365Z] > refreshing access token with scopes: ["email","https://www.googleapis.com/auth/cloud-platform","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","openid"]
+[debug] [2018-02-08T08:10:21.365Z] >>> HTTP REQUEST POST https://www.googleapis.com/oauth2/v3/token  
+ { refresh_token: '1/VbhzJdx5uDjupdYUiB1WkEzl66rnN6dNkaGVhrjasDQ',
+  client_id: '563584335869-fgrhgmd47bqnekij5i8b5pr03ho849e6.apps.googleusercontent.com',
+  client_secret: 'j9iVZfS8kkCEFUPaAeJV0sAi',
+  grant_type: 'refresh_token',
+  scope: 'email https://www.googleapis.com/auth/cloud-platform https://www.googleapis.com/auth/cloudplatformprojects.readonly https://www.googleapis.com/auth/firebase openid' } 
+ Thu Feb 08 2018 17:10:21 GMT+0900 (JST)
+[debug] [2018-02-08T08:10:21.546Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-08T08:10:21.563Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/projects/kiunchu-bf551  
+  
+ Thu Feb 08 2018 17:10:21 GMT+0900 (JST)
+[debug] [2018-02-08T08:10:22.392Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-08T08:10:22.393Z] >>> HTTP REQUEST GET https://admin.firebase.com/v1/database/kiunchu-bf551/tokens  
+  
+ Thu Feb 08 2018 17:10:22 GMT+0900 (JST)
+[debug] [2018-02-08T08:10:23.013Z] <<< HTTP RESPONSE 200
+[info] 
+[info] === Serving from '/Users/yaginumahiroshi1'...
+[info] 
+[debug] [2018-02-08T08:10:23.016Z] >>> HTTP REQUEST GET https://cloudresourcemanager.googleapis.com/v1/projects/kiunchu-bf551  
+  
+ Thu Feb 08 2018 17:10:23 GMT+0900 (JST)
+[debug] [2018-02-08T08:10:23.968Z] <<< HTTP RESPONSE 200
+[debug] [2018-02-08T08:10:23.970Z] >>> HTTP REQUEST GET https://mobilesdk-pa.googleapis.com/v1/projects/272941572629/clients/_:getWebAppConfig  
+  
+ Thu Feb 08 2018 17:10:23 GMT+0900 (JST)
+[debug] [2018-02-08T08:10:24.904Z] <<< HTTP RESPONSE 200
+[info] i  hosting: Serving hosting files from: public
+[info] ✔  hosting: Local server: http://localhost:5000
+

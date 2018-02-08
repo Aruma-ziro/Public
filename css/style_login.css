@@ -1,0 +1,120 @@
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium");
+	font-weight: 100;
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium");
+	font-weight: 200;
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium");
+	font-weight: 300;
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic Medium");
+	font-weight: 400;
+}
+@font-face {
+	font-family: "Yu Gothic";
+	src: local("Yu Gothic bold");
+	font-weight:bold;
+}
+html{
+	font-size: 62.5%; /*1rem 10px*/
+}
+body {
+	font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","游ゴシック Medium","yu gothic",yuGothic,"Hiragino Kaku Gothic ProN",メイリオ,Meiryo,sans-serif;
+	width:100%;
+	margin:0 auto;
+	padding:0;
+	font-size: 1.2rem;
+}
+
+h1{
+	font-size : 3rem;
+	color : #5A392B;
+}
+h2{
+	font-size : 2rem;
+	font-weight:bold;
+	color : #5A392B;
+}
+p{
+	font-size: 1.4rem;
+}
+.pagewrap{
+	width:97%;
+	margin:0 auto;
+}
+/*---------------------上部ロゴの部分-------------------*/
+
+.kiunity_logo{
+	width:100%;
+	margin:1% auto;
+	text-align:center;
+}
+.kiunity{
+	width:30%;
+}
+.left{
+  position: absolute;
+  top: 1%;
+  left: 6%;
+  width: 7%;
+}
+hr {
+	border-top: 1px solid #8c8b8b;
+}
+/*------------------------------------------------*/
+
+
+.textBox{
+	width: 90%;
+	margin:0 auto;
+}
+
+.content{
+	width:100%;
+	overflow:hidden;
+	margin:5% auto 5% auto;
+	text-align: center;
+}
+
+/*----------------登録フォーム------------------------*/
+input[type="text"],
+textarea {
+    padding: 0.8em;
+    outline: none;
+    border: 1px solid #DDD;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    font-size: 16px;
+}
+input[type="text"]:focus,
+texture:focus {
+    box-shadow: 0 0 7px #3498db;
+    border: 1px solid #3498db;
+}
+
+/*----------------------------------------*/
+
+.square_btn{
+    display: inline-block;
+    padding: 0.5em 1em;
+    text-decoration: none;
+    background: #668ad8;/*ボタン色*/
+    color: #FFF;
+    border-bottom: solid 4px #627295;
+    border-radius: 3px;
+}
+.square_btn:active {/*ボタンを押したとき*/
+    -ms-transform: translateY(4px);
+    -webkit-transform: translateY(4px);
+    transform: translateY(4px);/*下に動く*/
+    border-bottom: none;/*線を消す*/
+}

@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Map</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+
+    <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 80%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="map"></div>
+      
+
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+
+    <script>
+      // Initialize Firebase
+      var config = {
+            apiKey: "AIzaSyAH5A_yNpZ4q5AIop7Z8Gy1OwfaSbmlA5c",
+            authDomain: "my-project-1511093754488.firebaseapp.com",
+            databaseURL: "https://my-project-1511093754488.firebaseio.com",
+            projectId: "my-project-1511093754488",
+            storageBucket: "my-project-1511093754488.appspot.com",
+            messagingSenderId: "919891294216"
+          };
+          firebase.initializeApp(config);
+    </script>
+
+    <script>
+      //現在地レイヤーを有効にします。
+   //mMap.setMyLocationEnabled(true);
+
+
+      function initMap() {
+           // Try HTML5 geolocation.
+        if (navigator.geolocation) {
+            var syncerWatchPosition = {
+                count: 0 ,
+                lastTime: 0 ,
+                map: null ,
+                marker: null ,
+            } ;
+            
+            // 成功した時の関数
+            function successFunc( position ){
+                // データの更新
+                ++syncerWatchPosition.count ;					// 処理回数
+                console.log(syncerWatchPosition.count);             //処理回数をログ表示
+                var nowTime = ~~( new Date() / 1000 ) ;	// UNIX Timestamp
+
+                // 前回の書き出しから3秒以上経過していたら描写
+                // 毎回HTMLに書き出していると、ブラウザがフリーズするため
+                if( (syncerWatchPosition.lastTime + 3) > nowTime )
+                {
+                    return false ;
+                }
+
+                // 前回の時間を更新
+                syncerWatchPosition.lastTime = nowTime ;
+
+                //取得データの整理
+                var data = position.coords;
+
+                //データの整理
+                var lat = data.latitude;
+                var lng = data.longitude;
+
+                // 位置情報
+                var latlng = new google.maps.LatLng( lat , lng ) ;
+
+                // Google Mapsに書き出し
+                if( syncerWatchPosition.map == null )
+                {
+                    // 地図の新規出力
+                    syncerWatchPosition.map = new google.maps.Map( document.getElementById( 'map' ) , {
+                        zoom: 15 ,				// ズーム値
+                        center: latlng ,		// 中心座標 [latlng]
+                    } ) ;
+
+                    // マーカーの新規出力
+                    syncerWatchPosition.marker = new google.maps.Marker( {
+                        map: syncerWatchPosition.map ,
+                        position: latlng ,
+                    } ) ;
+                }
+                else
+                {
+                    // 地図の中心を変更
+                    syncerWatchPosition.map.setCenter( latlng ) ;
+
+                    // マーカーの場所を変更
+                    syncerWatchPosition.marker.setPosition( latlng ) ;
+                }
+            }
+
+                // 失敗した時の関数
+            function errorFunc( error )
+            {
+                // エラーコードのメッセージを定義
+                var errorMessage = {
+                    0: "原因不明のエラーが発生しました…。" ,
+                    1: "位置情報の取得が許可されませんでした…。" ,
+                    2: "電波状況などで位置情報が取得できませんでした…。" ,
+                    3: "位置情報の取得に時間がかかり過ぎてタイムアウトしました…。" ,
+                } ;
+
+                // エラーコードに合わせたエラー内容を表示
+                alert( errorMessage[error.code] ) ;
+            }
+            
+            
+            // オプション・オブジェクト
+            var optionObj = {
+                "enableHighAccuracy": true ,
+                "timeout": 1000000 ,
+                "maximumAge": 0 ,
+            } ;
+
+            // 現在位置を取得する
+            navigator.geolocation.watchPosition( successFunc , errorFunc) ;
+
+        } else {
+          // Browser doesn't support Geolocation
+          handleLocationError(false, infoWindow, map.getCenter());
+        }
+        
+       function handleLocationError(browserHasGeolocation, infoWindow, pos) {
+            infoWindow.setPosition(pos);
+            infoWindow.setContent(browserHasGeolocation ?
+                                  'Error: The Geolocation service failed.' :
+                                  'Error: Your browser doesn\'t support geolocation.');
+      }
+      }
+
+    </script>
+
+
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKT7CWNhZXYn22iBLxgP0GsBNHFmjumqQ&callback=initMap"
+    async defer></script>
+  </body>
+</html>

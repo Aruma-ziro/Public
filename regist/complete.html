@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+	<meta charset="UTF-8">
+	<title>登録</title>	
+</head>
+<body>
+    <p>登録ありがとうございます</p>
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+    <script>
+    var config = { 
+  		apiKey: "AIzaSyB72JSMwvhh25ac-HDcpe9kK8xAZ8vTxVQ", 
+    	authDomain: "kiunchu-bf551.firebaseapp.com", 
+    	databaseURL: "https://kiunchu-bf551.firebaseio.com", 
+    	projectId: "kiunchu-bf551", 
+    	storageBucket: "kiunchu-bf551.appspot.com", 
+   		messagingSenderId: "272941572629" 
+   	}; 
+   	firebase.initializeApp(config);
+    var provider = new firebase.auth.FacebookAuthProvider();
+        firebase.auth().onAuthStateChanged(function(user) {
+        });
+  </script>
+</body>
+</html>

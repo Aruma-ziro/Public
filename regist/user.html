@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>登録</title>	
+
+  <!--　　　　　　     全ページ共通のスタイルシート    　　　　　　-->
+  <link rel="stylesheet" type="text/css" href="css/reset.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <!--                ここまで                              -->
+</head>
+
+<body>
+  <div class="pagewrap">
+    <header>
+      <h1 class="kiunity_logo">
+        <img class="kiunity" src="img/kiunity_logo.png" alt="kiunity">
+      </h1>
+      <a href="javascript:history.back()"><img class="left" src="img/left.png" alt="left"></a>
+      <hr>
+    </header>
+
+
+    <div class="content">
+      <h2>ユーザー情報の登録</h2>
+    </div>
+
+    <div class="content">
+    <p>ユーザー名を入力してください</p>
+    <input type='text' id='username' placeholder='name'>
+    </div>
+
+    <div class="content">
+    <p>アイコン画像</p>
+    <input type="file" id="file-upload" accept="image/*">
+    </div>
+      
+    <div class="content">
+    <p>自己紹介文</p>
+    <textarea id="profile" cols="35" rows="4"></textarea><!--ここ追加-->
+    </div>
+      
+    <div class="content">
+    <input type="submit" id="send" value="送信" />
+    </div>
+  </div>
+    <div id="warning"> </div><!--ここ追加-->
+    
+  <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+  <script type="text/javascript" src="js/user.js"></script>
+</body>
+</html>

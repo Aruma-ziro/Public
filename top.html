@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>top</title>
+    <meta name="viewport" content="initial-scale=1.0">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+   <!--  <link rel="stylesheet" type="text/css" href="../style.css"> -->
+
+    <style>
+      #search {
+        height: 40px;
+        width: 100px;
+      }
+      #map {
+        height: 540px;
+        width: 360px;
+      }
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+      #navi #eventButton {
+        border:1px;
+        float:left;
+        padding:20px;
+      }
+      #navi #mypageButton {
+        border:1px;
+        float:left;
+        padding:20px;
+      }
+    </style>
+      
+      <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  </head>
+
+  <body>
+    <!-- 検索 -->
+      <form name="search">
+          <input type="text" name="txtb">
+          <input type="button" value="検索"  id="search">
+      </form>
+
+    <div id="map"></div>
+
+    <div id="navi">
+        <div id="eventButton"><input type="button" value="イベント作成" onClick="window.location.href = 'makeevent.html'"></div>
+        <div id="mypageButton"><input type="button" value="マイページ" id="jumpMypage"></div>
+    </div>
+
+    <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+    <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+
+      <script  src="js/top.js"></script>
+      
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKT7CWNhZXYn22iBLxgP0GsBNHFmjumqQ&callback=initMap"
+    async defer></script>
+  </body>
+</html>

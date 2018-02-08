@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>マイページ</title>	
+
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style_mypage.css">
+
+
+</head>
+<body>
+    <div class="pagewrap">
+        <header>
+            <h1 class="kiunity_logo">
+                <img class="kiunity" src="images/kiunity_logo.png" alt="kiunity">
+            </h1>
+            <a href="javascript:history.back()"><img class="left" src="images/left.png" alt="left"></a>
+            <a href="javascript:void(0);" id="settings" ><img class="settingIcon" src="images/settings.jpg" alt="設定"></a>
+        </header>
+
+        <div class="content">
+            <h2>Mypage</h2>
+        </div>
+
+        <div class="content">
+            <p>
+                <ul class="oya">ユーザー情報
+                    <li class="kodomo" id="u_name"></li>
+                    <li class="kodomo" id="u_profile"></li>
+                </ul>
+            </p>
+            <p>
+                <ul class="oya">イベント
+                        <li　class="kodomo" id="eventList"></li>
+                    </ul>
+                </ul>
+            </p>
+        </div>
+    </div>
+
+    
+    <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+    <script language="javascript" type="text/javascript" src="js/mypage.js"></script>
+
+</body>
+</html>

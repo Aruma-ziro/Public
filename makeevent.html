@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="jp">
+<head>
+	<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width,initial-scale=1">
+ <meta name="viewport" content="initial-scale=1.0">
+ <link rel="stylesheet" type="text/css" href="css/style.css">
+
+ <title>makeEvent</title>
+
+</head>
+
+<body>
+  <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.3.2/firebase.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-auth.js"></script>   
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-storage.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-database.js"></script>
+
+  <script src="js/makeevent.js"></script>
+
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDKT7CWNhZXYn22iBLxgP0GsBNHFmjumqQ&callback=initMap"
+     async defer>
+  </script>
+   
+
+  <form name="param" action="#">
+
+            イベント名：<input type="text" id="eventName"><br/>
+            イベント内容：<input type="text" id="eventContent"><br/>
+            イベント参加人数:<input type="number" min="1" max="10" id="eventLimit"><br/>
+            ジャンル：
+            <select name="genreSe" id="genre">
+                  <option value="gameCenter">ゲーセン</option>
+                  <!-- <option value="mobileApp">ポケモンGO</option> -->
+                  <option value="streetLive">路上ライブ</option>
+                 <!--  <option value="timesSale">露店</option> -->
+                 <!--  <option value="movingSale">移動販売</option> -->
+                 <!--  <option value="sports">スポーツ</option> -->
+                  <option value="talking">会話（フレンズ限定）</option>
+                  <!-- <option value="eating">食事（フレンズ限定）</option> -->
+            </select>
+
+            <!-- マップ位置情報変数 -->
+<!--             <input type="hidden" id="eventPos" > -->
+            <!-- ボタン削除 -->
+<!--             <div id="floating-panel">
+                  <input onclick="deleteMarkers();" type=button value="Delete Markers">
+            </div> -->
+            <!-- マップ -->
+            <div id="map"></div>
+            <!-- 送信ボタン -->
+            <input type="button" value="イベント作成" onClick="onClickProccess()">
+
+            <input type="button" value="チャット" onClick="window.location.href = 'chat.html'">
+            <input type="button" value="DB情報をマーカー表示" onClick="window.location.href = 'top.html'">
+
+  </form>
+  <div id="error"></div>
+
+
+<!--   <div id="answer"></div>
+  <div id="answer2"></div>
+  <div id="answer3"></div> -->
+
+  </body>
+</html>
