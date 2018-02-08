@@ -65,7 +65,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     }
     else{
       $('#settings').click(function(){
-        var url = "../settings.html?user_id=" + uid;
+        var url = "./settings.html?user_id=" + uid;
         location.href = url;
       });
     }
