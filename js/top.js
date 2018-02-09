@@ -210,9 +210,9 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 
 //マイページへのリンク
-document.getElementByID('jumpMypage').onclick = function(){
+$("#jumpMypage").click(function(){
     firebase.auth().onAuthStateChanged(function(user){
         var url = "../user/mypage.html?user_id=" + user.uid;
         location.href = url;
     });
-}
+});

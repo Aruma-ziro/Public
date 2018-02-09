@@ -5,7 +5,7 @@
 	<title>設定</title>	
 
     <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style_settings.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
 </head>
@@ -15,7 +15,6 @@
             <h1 class="kiunity_logo">
                 <img class="kiunity" src="images/kiunity_logo.png" alt="kiunity">
             </h1>
-            <a href="javascript:history.back()"><img class="left" src="images/left.png" alt="left"></a>
         </header>
 
         <div class="content">
@@ -23,9 +22,18 @@
         </div>
 
         <div class="content">
-            <p>名前：<input type="text" id="setName"></p>
-            <p>自己紹介文：<input type="text" id="setProfile"></p>
+            <p>ユーザー名</p>
+            <p><input type='text' id='setName' placeholder='name'></p>
         </div>
+
+        <div class="content">
+            <p>アイコン画像</p>
+            <p><input type="file" id="setFile" accept="image/*"></p>
+        </div>
+
+        <div class="content">
+            <p>自己紹介文</p>
+            <p><textarea id="setProfile" cols="35" rows="4"></textarea></p>
 
         <div class="content">
             <div class="square_btn" id="save"><p>保存</p></div>    

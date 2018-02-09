@@ -5,7 +5,7 @@
 	<title>マイページ</title>	
 
     <link rel="stylesheet" type="text/css" href="css/reset.css">
-    <link rel="stylesheet" type="text/css" href="css/style_mypage.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
 
 </head>
@@ -13,14 +13,13 @@
     <div class="pagewrap">
         <header>
             <h1 class="kiunity_logo">
-                <img class="kiunity" src="images/kiunity_logo.png" alt="kiunity">
+                <a href="javascript:void(0);" id="kiunity"><img class="kiunity" src="images/kiunity_logo.png" alt="kiunity"></a>
             </h1>
-            <a href="javascript:history.back()"><img class="left" src="images/left.png" alt="left"></a>
             <a href="javascript:void(0);" id="settings" ><img class="settingIcon" src="images/settings.jpg" alt="設定"></a>
         </header>
 
         <div class="content">
-            <h2>Mypage</h2>
+            <h2>マイページ</h2>
         </div>
 
         <div class="content">
@@ -32,8 +31,7 @@
             </p>
             <p>
                 <ul class="oya">イベント
-                        <li　class="kodomo" id="eventList"></li>
-                    </ul>
+                        <p><li　class="kodomo" id="eventList"></li><p>
                 </ul>
             </p>
         </div>

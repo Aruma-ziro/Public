@@ -24,7 +24,7 @@
   font-weight:bold;
 }
 html{
-  font-size: 62.5%; /*1rem 10px*/
+  font-size: 175%; /*1rem 10px*/
 }
 body {
   font-family:-apple-system,BlinkMacSystemFont,"Helvetica Neue","游ゴシック Medium","yu gothic",yuGothic,"Hiragino Kaku Gothic ProN",メイリオ,Meiryo,sans-serif;
@@ -58,7 +58,7 @@ p{
   text-align:center;
 }
 .kiunity{
-  width:30%;
+  width:50%;
 }
 .left{
   position: absolute;
@@ -80,7 +80,7 @@ hr {
 .content{
   width:100%;
   overflow:hidden;
-  margin:5% auto 5% auto;
+  margin:10% auto 5% auto;
   text-align: center;
 }
 
@@ -89,16 +89,19 @@ input[type="text"],
 textarea {
     padding: 0.8em;
     outline: none;
-    border: 1px solid #DDD;
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    border-radius: 3px;
-    font-size: 16px;
+    border: 0.1rempx solid #DDD;
+    -webkit-border-radius: 0.3rem;
+    -moz-border-radius: 0.3rem;
+    border-radius: 0.3rem;
+    font-size: 1.6rem;
 }
 input[type="text"]:focus,
 texture:focus {
-    box-shadow: 0 0 7px #3498db;
-    border: 1px solid #3498db;
+    box-shadow: 0 0 0.7rem #3498db;
+    border: 0.1rem solid #3498db;
+}
+input[type="file"]{
+  font-size: 1.6rem;
 }
 
 /*----------------------------------------*/
@@ -130,7 +133,7 @@ ul li {
   color: black;
   position:relative;
   background: #f1f8ff;/*バーの色*/
-  line-height: 1.5;
+  line-height: 1.5rem;
   padding: 0.5em;
   margin-bottom: 4px;
   border-left : solid 35px #5c9ee7;/*先の色＝アイコン裏の色*/
@@ -158,11 +161,11 @@ ul li:before {
 }
 
 .oya{
-	font-size: 250%;
+	font-size:　1.5rem;
 	font-weight: bold;
 }
 .kodomo{
-  font-size: 150%;
+  font-size: 1.7rem;
 }
 .settingIcon{
 	position: absolute;

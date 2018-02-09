@@ -24,6 +24,11 @@ var id = paramArray.user_id;
 var ref,ref2,ref3,key;
 
 
+$("#kiunity").click(function(){
+  var url = "../../top.html";
+  location.href = url;
+});
+
 
 firebase.auth().onAuthStateChanged(function(user) {
   var uid = user.uid;
@@ -37,7 +42,7 @@ firebase.auth().onAuthStateChanged(function(user) {
     ref.on("value",function(snapshot){
 
       var username = snapshot.child("name").val();
-      document.getElementById("u_name").innerHTML = "名前：" + username;
+      document.getElementById("u_name").innerHTML = "ユーザー名：" + username;
 
       var profile = snapshot.child("profile").val();
       document.getElementById("u_profile").innerHTML = "自己紹介文：" + profile;
@@ -69,6 +74,9 @@ firebase.auth().onAuthStateChanged(function(user) {
         location.href = url;
       });
     }
+  }
+  else{
+    location.href = "../../index.html";
   }
 });
     
