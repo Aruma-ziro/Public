@@ -5,7 +5,7 @@
 	<title>登録</title>	
 </head>
 <body>
-    <p>登録ありがとうございます</p>
+    <h1 id="thanksreg">登録ありがとうございます</h1>
     <script src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js'></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.2.0/firebase-app.js"></script>
@@ -25,6 +25,7 @@
     var provider = new firebase.auth.FacebookAuthProvider();
         firebase.auth().onAuthStateChanged(function(user) {
         });
+    setTimeout(window.location.href = '../top.html', 800);
   </script>
 </body>
 </html>

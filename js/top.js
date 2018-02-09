@@ -53,7 +53,9 @@ function initMap() {
                 // 地図の新規出力
                 syncerWatchPosition.map = new google.maps.Map( document.getElementById( 'map' ) , {
                     zoom: 15 ,              // ズーム値
-                    center: latlng      // 中心座標 [latlng]
+                    center: latlng,     // 中心座標 [latlng]
+                    streetViewControl:false, //ストリートビュー消す
+                    zoomControl: false
                 });
 
                 // 自分のマーカーの新規出力
@@ -105,9 +107,11 @@ function initMap() {
                             //マーカー表示
                             icon: {
                                 //url: icons[this.genre]['icon'],
-                                url: 'images/talk.png',
+                                url: 'images/music.png',
                                 scaledSize: new google.maps.Size( 30, 30)
-                            }
+                            },
+                            animation: google.maps.Animation.DROP
+
                         }); 
                        // console.log(icons['talking']['icon']);
 
@@ -119,6 +123,7 @@ function initMap() {
                         });
                         marker.setMap(syncerWatchPosition.map);
                     });
+
                 }); 
                 //--磯の追加部分 end
 
@@ -205,7 +210,7 @@ function handleLocationError(browserHasGeolocation, infoWindow, pos) {
 }
 
 //マイページへのリンク
-document.getElementById('jumpMypage').onclick = function(){
+document.getElementByID('jumpMypage').onclick = function(){
     firebase.auth().onAuthStateChanged(function(user){
         var url = "../user/mypage.html?user_id=" + user.uid;
         location.href = url;

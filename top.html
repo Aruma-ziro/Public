@@ -5,49 +5,28 @@
     <meta name="viewport" content="initial-scale=1.0">
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-   <!--  <link rel="stylesheet" type="text/css" href="../style.css"> -->
+    <link rel="stylesheet" type="text/css" href="css/reset.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
-    <style>
-      #search {
-        height: 40px;
-        width: 100px;
-      }
-      #map {
-        height: 540px;
-        width: 360px;
-      }
-      html, body {
-        height: 100%;
-        margin: 0;
-        padding: 0;
-      }
-      #navi #eventButton {
-        border:1px;
-        float:left;
-        padding:20px;
-      }
-      #navi #mypageButton {
-        border:1px;
-        float:left;
-        padding:20px;
-      }
-    </style>
       
       <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   </head>
 
   <body>
-    <!-- 検索 -->
-      <form name="search">
-          <input type="text" name="txtb">
-          <input type="button" value="検索"  id="search">
-      </form>
-
     <div id="map"></div>
 
+      <!-- 検索 -->
+    <form name="search">
+        <input type="text" name="txtb" id="search_bar">
+        <input type="button" value="検索"  id="search_send">
+    </form>
+
     <div id="navi">
-        <div id="eventButton"><input type="button" value="イベント作成" onClick="window.location.href = 'makeevent.html'"></div>
-        <div id="mypageButton"><input type="button" value="マイページ" id="jumpMypage"></div>
+        <a href="makeevent.html" class="eventButton">EVENT</a>
+       <!--  <div class="eventButton"><input type="button" value="イベント作成" onClick="window.location.href = 'makeevent.html'"></div> -->
+        <a href="user/mypage.html" class="mypageButton">MY PAGE</a>
+
+   <!--      <div id="mypageButton"><input type="button" value="マイページ" id="jumpMypage"></div> -->
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/4.7.0/firebase.js"></script>
